@@ -32,3 +32,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 vim.wo.foldmethod = 'expr'
 vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.wo.foldenable = false
