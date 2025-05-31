@@ -37,11 +37,8 @@ return {
     --
     vim.keymap.set('n', '<leader>m', function()
       harpoon:list():add()
-    end)
+    end, { desc = 'Add to harpoon' })
 
-    vim.keymap.set('n', '<leader>d', function()
-      harpoon:list():remove()
-    end)
     --   vim.keymap.set('n', '<leader>1', function()
     --     harpoon:list():select(1)
     --   end)
