@@ -5,6 +5,7 @@ return { -- You can easily change to a different colorscheme.
   config = function()
     local fm = require 'fluoromachine'
     fm.setup {
+      brightness = 0.03,
       glow = true,
       theme = 'delta',
       transparent = true,
