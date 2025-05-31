@@ -6,7 +6,7 @@ return { -- You can easily change to a different colorscheme.
     local fm = require 'fluoromachine'
     fm.setup {
       glow = true,
-      theme = 'fluoromachine',
+      theme = 'delta',
       transparent = true,
     }
     vim.cmd.colorscheme 'fluoromachine'

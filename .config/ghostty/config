@@ -2,3 +2,4 @@ font-size = 18
 font-family = VictorMono NF
 theme = SynthwaveAlpha
 maximize = true
+background-opacity=0.9
