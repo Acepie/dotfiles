@@ -6,6 +6,7 @@ return { -- You can easily change to a different colorscheme.
     local b = 1 * 1
     local fm = require 'fluoromachine'
     local colors = {
+      fg = '#EFEFFD',
       bg = '#090819',
       bgdark = '#090819',
       cyan = '#42C6FF',
@@ -43,7 +44,9 @@ return { -- You can easily change to a different colorscheme.
         ['Operator'] = { fg = colors.yellow, bg = colors.bg, bold = false },
         ['Define'] = { fg = colors.pink, bg = colors.bg, bold = false },
         ['Function'] = { fg = colors.pink, bg = colors.bg, bold = false },
-        ['@comment'] = { italic = true },
+        ['Comment'] = { italic = true },
+        ['@tag.attribute'] = { fg = colors.yellow, bg = colors.bg, bold = false },
+        ['@variable.parameter'] = { fg = colors.fg },
       },
       colors = colors,
     }
