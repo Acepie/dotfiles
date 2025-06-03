@@ -9,6 +9,9 @@ return { -- You can easily change to a different colorscheme.
       glow = true,
       theme = 'delta',
       transparent = false,
+      plugins = {
+        notify = false,
+      },
     }
     vim.cmd.colorscheme 'fluoromachine'
   end,
