@@ -7,6 +7,7 @@ return {
   config = function()
     local bufferline = require 'bufferline'
     local underline_color = '#FF5599'
+    local selected_text_color = '#FF5599'
     bufferline.setup {
       options = {
         mode = 'buffers', -- set to "tabs" to only show tabpages instead
@@ -51,6 +52,7 @@ return {
       },
       highlights = {
         buffer_selected = {
+          fg = selected_text_color,
           underline = true,
           sp = underline_color,
         },
@@ -82,56 +84,56 @@ return {
           sp = underline_color,
         },
         hint_selected = {
-          fg = 'white',
+          fg = selected_text_color,
           sp = underline_color,
         },
         hint_diagnostic = {
           sp = underline_color,
         },
         hint_diagnostic_selected = {
-          fg = 'white',
+          fg = selected_text_color,
           sp = underline_color,
         },
         info = {
           sp = underline_color,
         },
         info_selected = {
-          fg = 'white',
+          fg = selected_text_color,
           sp = underline_color,
         },
         info_diagnostic = {
           sp = underline_color,
         },
         info_diagnostic_selected = {
-          fg = 'white',
+          fg = selected_text_color,
           sp = underline_color,
         },
         warning = {
           sp = underline_color,
         },
         warning_selected = {
-          fg = 'white',
+          fg = selected_text_color,
           sp = underline_color,
         },
         warning_diagnostic = {
           sp = underline_color,
         },
         warning_diagnostic_selected = {
-          fg = 'white',
+          fg = selected_text_color,
           sp = underline_color,
         },
         error = {
           sp = underline_color,
         },
         error_selected = {
-          fg = 'white',
+          fg = selected_text_color,
           sp = underline_color,
         },
         error_diagnostic = {
           sp = underline_color,
         },
         error_diagnostic_selected = {
-          fg = 'white',
+          fg = selected_text_color,
           sp = underline_color,
         },
       },
