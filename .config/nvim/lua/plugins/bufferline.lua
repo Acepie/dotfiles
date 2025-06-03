@@ -5,9 +5,12 @@ return {
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
-    require('bufferline').setup {
+    local bufferline = require 'bufferline'
+    local underline_color = '#FF5599'
+    bufferline.setup {
       options = {
         mode = 'buffers', -- set to "tabs" to only show tabpages instead
+        style_preset = bufferline.style_preset.no_italic,
         themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
         numbers = 'none', -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
         close_command = 'bdelete! %d', -- can be a string | function, see "Mouse actions"
@@ -28,17 +31,17 @@ return {
           local icon = level:match 'error' and ' ' or ' '
           return ' ' .. icon .. count
         end,
-        color_icons = true,
+        color_icons = false,
         show_buffer_icons = true,
         show_buffer_close_icons = true,
         show_close_icon = true,
         persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
-        separator_style = 'thick',
         enforce_regular_tabs = true,
         always_show_bufferline = true,
-        show_tab_indicators = false,
+        show_tab_indicators = true,
+        separator_style = 'slant',
         indicator = {
-          style = 'none', -- Options: 'icon', 'underline', 'none'
+          style = 'underline', -- Options: 'icon', 'underline', 'none'
         },
         icon_pinned = '󰐃',
         minimum_padding = 1,
@@ -47,12 +50,89 @@ return {
         sort_by = 'insert_at_end',
       },
       highlights = {
-        separator = {
-          fg = '#434C5E',
-        },
         buffer_selected = {
-          bold = true,
-          italic = false,
+          underline = true,
+          sp = underline_color,
+        },
+        tab_separator_selected = {
+          sp = underline_color,
+          underline = true,
+        },
+        separator_selected = {
+          sp = underline_color,
+          underline = true,
+        },
+        indicator_selected = {
+          underline = true,
+          sp = underline_color,
+        },
+        pick_selected = {
+          underline = true,
+          sp = underline_color,
+        },
+        modified_selected = {
+          underline = true,
+          sp = underline_color,
+        },
+        close_button_selected = {
+          underline = true,
+          sp = underline_color,
+        },
+        hint = {
+          sp = underline_color,
+        },
+        hint_selected = {
+          fg = 'white',
+          sp = underline_color,
+        },
+        hint_diagnostic = {
+          sp = underline_color,
+        },
+        hint_diagnostic_selected = {
+          fg = 'white',
+          sp = underline_color,
+        },
+        info = {
+          sp = underline_color,
+        },
+        info_selected = {
+          fg = 'white',
+          sp = underline_color,
+        },
+        info_diagnostic = {
+          sp = underline_color,
+        },
+        info_diagnostic_selected = {
+          fg = 'white',
+          sp = underline_color,
+        },
+        warning = {
+          sp = underline_color,
+        },
+        warning_selected = {
+          fg = 'white',
+          sp = underline_color,
+        },
+        warning_diagnostic = {
+          sp = underline_color,
+        },
+        warning_diagnostic_selected = {
+          fg = 'white',
+          sp = underline_color,
+        },
+        error = {
+          sp = underline_color,
+        },
+        error_selected = {
+          fg = 'white',
+          sp = underline_color,
+        },
+        error_diagnostic = {
+          sp = underline_color,
+        },
+        error_diagnostic_selected = {
+          fg = 'white',
+          sp = underline_color,
         },
       },
     }

@@ -8,7 +8,7 @@ return { -- You can easily change to a different colorscheme.
       brightness = 0.03,
       glow = true,
       theme = 'delta',
-      transparent = true,
+      transparent = false,
     }
     vim.cmd.colorscheme 'fluoromachine'
   end,
