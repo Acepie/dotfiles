@@ -3,7 +3,9 @@ return { -- You can easily change to a different colorscheme.
   lazy = false,
   priority = 1000, -- Make sure to load this before all the other start plugins.
   config = function()
-    local b = 1 * 1
+    if vim.g.vscode then
+      return
+    end
     local fm = require 'fluoromachine'
     local colors = {
       fg = '#EFEFFD',

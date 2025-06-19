@@ -5,6 +5,9 @@ return {
     'nvim-tree/nvim-web-devicons',
   },
   config = function()
+    if vim.g.vscode then
+      return
+    end
     local bufferline = require 'bufferline'
     local underline_color = '#FF5599'
     local selected_text_color = '#FF5599'

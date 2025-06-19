@@ -61,6 +61,9 @@ return {
     },
   },
   config = function()
+    if vim.g.vscode then
+      return
+    end
     local dap = require 'dap'
     local dapui = require 'dapui'
 

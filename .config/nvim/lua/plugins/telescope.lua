@@ -14,6 +14,9 @@ return { -- Fuzzy Finder (files, lsp, etc)
     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
   },
   config = function()
+    if vim.g.vscode then
+      return
+    end
     require('telescope').setup {
       extensions = {
         ['ui-select'] = {
