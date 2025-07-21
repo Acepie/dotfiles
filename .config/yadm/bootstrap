@@ -21,7 +21,7 @@ if [ type starship >/dev/null 2>&1 ]; then
   echo "starship is already installed"
 else
   echo "starship is not installed"
-  curl -sS https://starship.rs/install.sh | sh
+  curl -sS https://starship.rs/install.sh | sh -s -- -y
 fi
 
 if [ type yazi >/dev/null 2>&1 ]; then
