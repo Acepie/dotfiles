@@ -10,9 +10,9 @@ else
     brew install neovim
   else
     if [ type apt-get >/dev/null 2>&1 ]; then
-      sudo apt-get install neovim
+      sudo apt-get install neovim -y
     elif [ type pacman >/dev/null 2>&1 ]; then
-      sudo pacman -S neovim
+      sudo pacman -S neovim --noconfirm
     fi
   fi
 fi
@@ -32,9 +32,9 @@ else
     brew install yazi
   else
     if [ type apt-get >/dev/null 2>&1 ]; then
-      sudo apt-get install yazi
+      sudo apt-get install yazi -y
     elif [ type yay >/dev/null 2>&1 ]; then
-      sudo yay -S yazi
+      sudo yay -S yazi --noconfirm
     fi
   fi
 fi
