@@ -27,6 +27,7 @@ return { -- Autoformat
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
+      json = { 'prettier', stop_after_first = true },
     },
   },
 }

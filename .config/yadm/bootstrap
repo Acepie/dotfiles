@@ -1,0 +1,40 @@
+#!/bin/sh
+
+system_type=$(uname -s)
+
+if [ type nvim >/dev/null 2>&1 ]; then
+  echo "neovim is already installed"
+else
+  echo "neovim is not installed"
+  if [ "$system_type" = "Darwin" ]; then
+    brew install neovim
+  else
+    if [ type apt-get >/dev/null 2>&1 ]; then
+      sudo apt-get install neovim
+    elif [ type pacman >/dev/null 2>&1 ]; then
+      sudo pacman -S neovim
+    fi
+  fi
+fi
+
+if [ type starship >/dev/null 2>&1 ]; then
+  echo "starship is already installed"
+else
+  echo "starship is not installed"
+  curl -sS https://starship.rs/install.sh | sh
+fi
+
+if [ type yazi >/dev/null 2>&1 ]; then
+  echo "yazi is already installed"
+else
+  echo "yazi is not installed"
+  if [ "$system_type" = "Darwin" ]; then
+    brew install yazi
+  else
+    if [ type apt-get >/dev/null 2>&1 ]; then
+      sudo apt-get install yazi
+    elif [ type yay >/dev/null 2>&1 ]; then
+      sudo yay -S yazi
+    fi
+  fi
+fi
