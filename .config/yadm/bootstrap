@@ -9,10 +9,14 @@ else
   if [ "$system_type" = "Darwin" ]; then
     brew install neovim
   else
-    if [ type apt-get >/dev/null 2>&1 ]; then
-      sudo apt-get install neovim -y
-    elif [ type pacman >/dev/null 2>&1 ]; then
+    if [ type pacman >/dev/null 2>&1 ]; then
       sudo pacman -S neovim --noconfirm
+    else
+      curl -LO https://github.com/neovim/neovim-releases/releases/latest/download/nvim-linux-x86_64.tar.gz
+      sudo rm -rf /opt/nvim
+      sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+      sudo ln -s /opt/nvim-linux-x86_64/bin/nvim /usr/bin/nvim
+      rm nvim-linux-x86_64.tar.gz
     fi
   fi
 fi
@@ -24,17 +28,3 @@ else
   curl -sS https://starship.rs/install.sh | sh -s -- -y
 fi
 
-if [ type yazi >/dev/null 2>&1 ]; then
-  echo "yazi is already installed"
-else
-  echo "yazi is not installed"
-  if [ "$system_type" = "Darwin" ]; then
-    brew install yazi
-  else
-    if [ type apt-get >/dev/null 2>&1 ]; then
-      sudo apt-get install yazi -y
-    elif [ type yay >/dev/null 2>&1 ]; then
-      sudo yay -S yazi --noconfirm
-    fi
-  fi
-fi
