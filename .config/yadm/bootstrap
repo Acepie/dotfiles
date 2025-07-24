@@ -2,14 +2,14 @@
 
 system_type=$(uname -s)
 
-if [ type nvim >/dev/null 2>&1 ]; then
+if [ -x "$(command -v nvim)" ]; then
   echo "neovim is already installed"
 else
   echo "neovim is not installed"
   if [ "$system_type" = "Darwin" ]; then
     brew install neovim
   else
-    if [ type pacman >/dev/null 2>&1 ]; then
+    if [ -x "$(command -v pacman)" ]; then
       sudo pacman -S neovim --noconfirm
     else
       curl -LO https://github.com/neovim/neovim-releases/releases/latest/download/nvim-linux-x86_64.tar.gz
@@ -21,7 +21,7 @@ else
   fi
 fi
 
-if [ type starship >/dev/null 2>&1 ]; then
+if [ -x "$(command -v starship)" ]; then
   echo "starship is already installed"
 else
   echo "starship is not installed"
@@ -29,14 +29,14 @@ else
   echo "eval '$(starship init zsh)'" >> ~/.bashrc
 fi
 
-if [ type fzf >/dev/null 2>&1 ]; then
+if [ -x "$(command -v fzf)" ]; then
   echo "fzf is already installed"
 else
   echo "fzf is not installed"
   if [ "$system_type" = "Darwin" ]; then
     brew install fzf
   else
-    if [ type pacman >/dev/null 2>&1 ]; then
+    if [ -x "$(command -v pacman)" ]; then
       sudo pacman -S fzf --noconfirm
     else
       sudo apt install fzf -y
@@ -44,14 +44,14 @@ else
   fi
 fi
 
-if [ type rg >/dev/null 2>&1 ]; then
+if [ -x "$(command -v rg)" ]; then
   echo "ripgrep is already installed"
 else
   echo "ripgrep is not installed"
   if [ "$system_type" = "Darwin" ]; then
     brew install ripgrep
   else
-    if [ type pacman >/dev/null 2>&1 ]; then
+    if [ -x "$(command -v pacman)" ]; then
       sudo pacman -S ripgrep --noconfirm
     else
       sudo apt install ripgrep -y
