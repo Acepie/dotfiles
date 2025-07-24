@@ -26,5 +26,35 @@ if [ type starship >/dev/null 2>&1 ]; then
 else
   echo "starship is not installed"
   curl -sS https://starship.rs/install.sh | sh -s -- -y
+  echo "eval '$(starship init zsh)'" >> ~/.bashrc
 fi
 
+if [ type fzf >/dev/null 2>&1 ]; then
+  echo "fzf is already installed"
+else
+  echo "fzf is not installed"
+  if [ "$system_type" = "Darwin" ]; then
+    brew install fzf
+  else
+    if [ type pacman >/dev/null 2>&1 ]; then
+      sudo pacman -S fzf --noconfirm
+    else
+      sudo apt install fzf -y
+    fi
+  fi
+fi
+
+if [ type rg >/dev/null 2>&1 ]; then
+  echo "ripgrep is already installed"
+else
+  echo "ripgrep is not installed"
+  if [ "$system_type" = "Darwin" ]; then
+    brew install ripgrep
+  else
+    if [ type pacman >/dev/null 2>&1 ]; then
+      sudo pacman -S ripgrep --noconfirm
+    else
+      sudo apt install ripgrep -y
+    fi
+  fi
+fi
