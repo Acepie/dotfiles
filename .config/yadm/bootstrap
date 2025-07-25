@@ -19,6 +19,7 @@ else
       rm nvim-linux-x86_64.tar.gz
     fi
   fi
+  git config --global core.editor nvim
 fi
 
 if [ -x "$(command -v starship)" ]; then
@@ -27,6 +28,7 @@ else
   echo "starship is not installed"
   curl -sS https://starship.rs/install.sh | sh -s -- -y
   echo 'eval "$(starship init bash)"' >> ~/.bashrc
+  echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 fi
 
 if [ -x "$(command -v fzf)" ]; then
