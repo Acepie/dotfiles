@@ -1,3 +1,5 @@
+vim.o.autowrite = true
+vim.o.autowriteall = true
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.o.termguicolors = true
