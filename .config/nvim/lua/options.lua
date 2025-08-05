@@ -1,5 +1,4 @@
-vim.o.autowrite = true
-vim.o.autowriteall = true
+vim.o.winborder = 'rounded'
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.o.termguicolors = true
