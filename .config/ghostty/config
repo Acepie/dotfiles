@@ -1,5 +1,7 @@
 font-size = 18
-font-family = Victor Mono
+font-family = VictorMono Nerd Font Mono
+font-style = Light
+font-style-italic = Bold Italic
 theme = SynthwaveAlpha
 maximize = true
 background-opacity=0.9
