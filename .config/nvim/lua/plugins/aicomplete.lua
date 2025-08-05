@@ -4,6 +4,9 @@ return {
     cond = function()
       return jit.os == 'OSX'
     end,
+    config = function()
+      vim.keymap.set('n', '<leader>l', '<cmd>Augment chat-toggle<CR>', { desc = 'Toggle chat window' })
+    end,
   },
   {
     'supermaven-inc/supermaven-nvim',
