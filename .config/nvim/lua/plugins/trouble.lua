@@ -1,17 +1,14 @@
 return {
   'folke/trouble.nvim',
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  opts = {
+    win = {},
+  }, -- for default options, refer to the configuration section for custom setup.
   cmd = 'Trouble',
   keys = {
     {
       '<leader>td',
       '<cmd>Trouble diagnostics toggle<cr>',
       desc = '[T]oggle [D]iagnostics window',
-    },
-    {
-      '<leader>tbd',
-      '<cmd>Trouble diagnostics toggle filter.buf=0<cr>',
-      desc = '[T]oggle [B]uffer [D]iagnostics window',
     },
     {
       '<leader>ts',

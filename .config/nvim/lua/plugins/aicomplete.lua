@@ -15,7 +15,7 @@ return {
     end,
     cond = function()
       -- Only load on Linux x64 aka personal computer
-      return jit.os == 'Linux' and jit.arch == 'x64'
+      return jit.os == 'Linux' and jit.arch == 'x64' and not vim.env.HOME == '/home/coder'
     end,
   },
 }
