@@ -1,0 +1,48 @@
+attribute = "yellow"
+keyword = {fg = "yellow", modifiers = ["bold"]}
+type = {fg = "pink", modifiers = ["italic"]}
+function = "pink"
+operator = "yellow"
+comment = {fg = "comment", modifiers = ["italic"]}
+constant = "cyan"
+punctuation = "pink"
+string = "purple"
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "orange"
+
+"ui.background" = {bg = "background"}
+"ui.background.separator" = "comment"
+"ui.linenr" = "comment"
+"ui.linenr.selected" = "pink"
+"ui.statusline" = {fg = "yellow", bg = "background", modifiers = ["underlined"], underline = "yellow"}
+"ui.bufferline" = {fg = "comment", bg = "background", modifiers = ["underlined"], underline = "comment"}
+"ui.statusline.inactive" = {fg = "comment", bg = "background", modifiers = ["underlined"], underline = "comment"}
+"ui.bufferline.active" = {fg = "pink", bg = "background", modifiers = ["underlined"], underline = "pink"}
+"ui.text" = "foreground"
+"ui.text.inactive" = "comment"
+"ui.virtual.whitespace" = "comment"
+"ui.selection" = {bg = "pink"}
+"ui.selection.primary" = {bg = "comment"}
+"warning" = "warning"
+"error" = "red"
+"hint" = "info"
+"info" = "info"
+"diagnostic.hint" = "hint"
+"diagnostic.info" = "info"
+"diagnostic.warning" = "warning"
+"diagnostic.error" = "error"
+
+[palette]
+background = "#090819"
+foreground = "#EFEFFD"
+cyan = "#42C6FF"
+green = "#C0FF98"
+orange = "#EED2C8"
+pink = "#FF5599"
+purple = "#D585FF"
+red = "#FF98B3"
+yellow = "#FF2AFC"
+comment = "#925393"
+warning = "#FFD298"
+info = "#A0DD78"

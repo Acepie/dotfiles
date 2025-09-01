@@ -1,0 +1,28 @@
+theme = "outrun"
+
+[editor]
+line-number = "relative"
+bufferline = "always"
+end-of-line-diagnostics = "hint"
+
+[editor.indent-guides]
+render = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true
+
+[editor.whitespace]
+render = "all"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
