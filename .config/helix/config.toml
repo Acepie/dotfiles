@@ -26,3 +26,6 @@ enable = true
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
+
+[keys.normal]
+tab = ":buffer-next"
