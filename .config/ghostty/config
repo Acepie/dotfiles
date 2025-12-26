@@ -5,3 +5,4 @@ font-style-italic = Bold Italic
 theme = Synthwave Alpha
 maximize = true
 background-opacity=0.9
+custom-shader = ~/.config/ghostty/shaders/cursor_warp.glsl
